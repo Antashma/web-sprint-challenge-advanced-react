@@ -63,6 +63,8 @@ This will only run once.
 Stateful logic is any code in a program that declares or modifies state in any way.
 
 5. Describe how to test a React component with React Testing Library.
+To test a react component with React testing libary we follow the Arange, Act and Assert method. We Arrange by making the code able to be tested. We then Act by using a a function or methode to create a result to be tested. Finally, we Assert by seeing if that result is what we expected (right and wrong data).
+
 To test a React component with the React Testing library, you first have to state what you want to test and what the expected outcome is. Then you arrange the date 
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
