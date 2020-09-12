@@ -29,14 +29,41 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. Explain how to build stateful class components.
+You build a stateful class component by first declaring it with 'class' followed by the component name then 'extends' then 'React.Component (or just Component if you imported {Component} from react). It should be followed by and opening and closing bracket. It should look like this: 
+```js
+  class ComponentName extends React.Component {}
+```
+In the brackets, you would decalre a as so: constructor() {}. You can place props in the parenthesis if needed. Within the constructor's curly braces, you would write super() (with props if need), and then declare the state ojbject as this.state and set it equal to and object with your desired state properties. Afther the constructor a render(){} is required and withoin it's block, you would make the return() statement and place your jsx within. The class component would look liek this:
+```js
+  class ComponentName extends React.Compnent {
+    constructor() {
+      super();
+      this.state = {
+        message : 'hello world'
+        }
+    }
+    render() {
+      return (
+        <div>
+          My state is says {this.state.message}!
+        </div>
+      )
+    }
+  }
+```
 
 2. Describe the different phases of the component lifecycle.
+The component lifecycle has three phases. The first is Mounting also know as the birth of the component. This is when the component is loaded and displayed in the browser. The second is Updating and also known as growth of the component. This is when the data is updated. The last pahse is Unmounting and known as the death of the component. This is when the component is removed from the program.
 
 3. Demonstrate an understanding of class component lifecycle methods.
+There are three common component lifecycle methods. The first ComponentDidMount() and runs after the component mounts. It will only run once and at that time. The next method id ComponentDidUpdate() and run whenever the component has a change in its state or props. It can be run multople times. The last common method is ComponentDidUnmount() and will run when the component is removed from the program. This method can be use to modify/remove functions or data when the component is no longer needed.
+This will only run once.
 
 4. Define stateful logic.
+Stateful logic is any code in a program that declares or modifies state in any way.
 
 5. Describe how to test a React component with React Testing Library.
+To test a React component with the React Testing library, you first have to state what you want to test and what the expected outcome is. Then you arrange the date 
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
@@ -61,15 +88,15 @@ _Please follow the setup instructions closely so that you can get everything up 
 
 **Starting the server**
 
-- [ ] Run `npm install` to download dependencies for the server.
-- [ ] Run the server using `npm start`.
-- [ ] Open a new browser tab and navigate to `http://localhost:3333/plants` - if you see a JSON object with plants data, then you know the server is running 👍
+- [x] Run `npm install` to download dependencies for the server.
+- [x] Run the server using `npm start`.
+- [x] Open a new browser tab and navigate to `http://localhost:3333/plants` - if you see a JSON object with plants data, then you know the server is running 👍
 
 **Starting the React app**
 
-- [ ] In a separate terminal cd into the `client` folder and run `npm install` to download dependencies.
-- [ ] Still inside the `client` folder run `npm run start` to run the client application.
-- [ ] Your browser should open up the project as normal
+- [x] In a separate terminal cd into the `client` folder and run `npm install` to download dependencies.
+- [x] Still inside the `client` folder run `npm run start` to run the client application.
+- [x] Your browser should open up the project as normal
 
 **Starting your test runner**
 
@@ -101,7 +128,7 @@ Nothing needs to be done here. You _will_ have to navigate to the cart page in y
 
 The form is working, but it is currently controlled by local stateful logic. We want to control this form with a custom hook.
 
-- [ ] Build a custom hook called `useForm`, and use it in your CheckoutForm component to control the form's stateful logic
+- [x] Build a custom hook called `useForm`, and use it in your CheckoutForm component to control the form's stateful logic
 
 _Note: You built a useForm hook in the guided project this week. You will probably need to use that as a guide to complete this step. However, try and build it out first before you peek at the guided project. And *do not* copy/paste directly from the guided project!_
 
